@@ -1,0 +1,60 @@
+﻿@model CRUDLeonardoMVC.Models.ViewModels.EmpleadoViewModel
+@{
+    ViewBag.Title = "Agregar nuevo empleado";
+}
+
+<h2>Agregar nuevo empleado</h2>
+
+@using (Html.BeginForm("Agregar", "Empleado", FormMethod.Post))
+{
+<div class="row">
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+                <label>Nombre</label>
+                @Html.TextBoxFor(e => e.nombre, "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+                <label>Apellido Paterno</label>
+                @Html.TextBoxFor(e => e.apellidopaterno, "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+                <label>Apellido Materno</label>
+                @Html.TextBoxFor(e => e.apellidomaterno, "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div>
+                <label>Edad</label>
+                @Html.TextBoxFor(e => e.edad, "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+                <label>Correo</label>
+                @Html.TextBoxFor(e => e.correo, "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+
+</div>
+    <div class="col-lg-12" style="text-align:right">
+        <a href="~/Empleado/" class="btn btn-primary">Regresar al listado</a>
+        <input type="submit" class="btn btn-success" value="Guardar">
+    </div>
+}
+
+
+
